@@ -10,3 +10,6 @@ dev
 # security
 *.Secret.yaml
 *.Secret.yml
+
+# log files
+*.log
