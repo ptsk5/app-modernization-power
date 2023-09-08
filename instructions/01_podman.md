@@ -26,7 +26,7 @@ From backend app folder run:
 
 ```bash
 # I saw an error running the latest python version container connecting to postresql (on M1 Macbook)
-# As an workaround, add and build with amd64 arch platform parameter instead -> --platform=linux/amd64
+# As a workaround, add and build with amd64 arch platform parameter instead -> --platform=linux/amd64
 podman build -t backend:latest .
 
 # NOTE: for Docker, use 'host.docker.internal' instead of 'host.containers.internal'. Or the hostname if the network has 'dns_enabled: true'
