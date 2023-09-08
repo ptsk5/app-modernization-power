@@ -1,0 +1,27 @@
+sequenceDiagram
+    autonumber; 
+    
+    actor usr as user
+    participant ui as frontend
+    participant bac as backend
+    participant gr as greeting
+    participant db as postgresql
+
+    usr->>+ui: Open / Refresh
+    ui->>+bac: [GET] /api/users 
+    bac->>+db: [jdbc] SELECT ... 
+    db-->>-bac: users[]
+    bac-->>-ui: { users: [] }
+
+    ui->>+bac: [GET] /api/greetings
+    bac->>+gr: [GET] /api/greetings
+    gr-->>-bac: greetings[]
+    bac-->>-ui: { greetings: [] } 
+    ui-->>-usr: 
+
+    usr->>+ui: Add user
+    ui->>+bac: [POST] /api/users 
+    bac->>+db: [jdbc] INSERT ... 
+    db-->>-bac: OK
+    bac-->>-ui: OK
+    ui-->>-usr: 

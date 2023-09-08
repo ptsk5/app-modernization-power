@@ -1,0 +1,6 @@
+__pycache__
+*.Secret.yaml
+.DS_Store
+.env
+k8s/
+tekton/

@@ -1,0 +1,11 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: frontend
+spec:
+  tls:
+    termination: edge
+  to:
+    name: frontend
+    kind: Service
+    weight: 100

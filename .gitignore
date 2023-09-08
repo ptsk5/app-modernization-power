@@ -1,0 +1,12 @@
+dev
+
+# draw.io artifacts
+*.drawio.bkp
+*.drawio.dtmp
+
+# MacOS 
+.DS_Store
+
+# security
+*.Secret.yaml
+*.Secret.yml

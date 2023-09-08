@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: greeting
+  labels:
+    app: greeting
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: greeting
+  template:
+    metadata:
+      labels:
+        app: greeting
+    spec:
+      containers:
+        - name: greeting
+          image: quay.io/client-engineering-cee/ocp-workshop/greeting:v2
+          ports:
+            - containerPort: 5000
+          env:
+            - name: GREETINGS
+              valueFrom:
+                configMapKeyRef:
+                  name: greeting
+                  key: GREETINGS
+          resources:
+            requests:
+              memory: "256Mi"
+              cpu: "250m"
+            limits:
+              memory: "512Mi"
+              cpu: "500m"

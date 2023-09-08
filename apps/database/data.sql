@@ -1,0 +1,1 @@
+INSERT INTO demo.users (firstName, lastName, email)  VALUES ( 'Demo', 'User', 'user@demo.com');
