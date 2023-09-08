@@ -1,4 +1,4 @@
-FROM registry.access.redhat.com/ubi8/python-38:1
+FROM registry.access.redhat.com/ubi8/python-311:1-18
 
 # WORKDIR /opt/app-root/src
 

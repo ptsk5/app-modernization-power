@@ -1,4 +1,4 @@
-FROM registry.access.redhat.com/ubi8/nodejs-14:1-51 as build
+FROM registry.access.redhat.com/ubi8/nodejs-16:1-118 as build
 
 # WORKDIR /opt/app-root
 
@@ -9,7 +9,7 @@ COPY . .
 RUN npm run build
 
 
-FROM registry.access.redhat.com/ubi8/nginx-120:1-5
+FROM registry.access.redhat.com/ubi8/nginx-120:1-117
 
 COPY --from=build /opt/app-root/src/build .
 COPY --from=build /opt/app-root/src/nginx/api-location.conf /opt/app-root/etc/nginx.default.d/
