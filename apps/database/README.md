@@ -5,7 +5,8 @@
 Use `bitnami/postgresql` image to run the database in the podman:
 
 ```bash
-podman run --name postgresql -d -p 5432:5432 -e POSTGRESQL_PASSWORD=password123 -e POSTGRESQL_DATABASE=demodb bitnami/postgresql:latest
+# TODO: Unfortunately there is no bitnami/postgresql option available for ppc64le architecture
+podman run --name postgresql -d -p 5432:5432 -e POSTGRESQL_PASSWORD=password123 -e POSTGRESQL_DATABASE=demodb docker.io/bitnami/postgresql:latest
 ```
 
 Exec into the container to have `psql` CLI tool available:
