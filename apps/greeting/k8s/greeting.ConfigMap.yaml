@@ -3,4 +3,4 @@ kind: ConfigMap
 metadata:
   name: greeting
 data:
-  GREETINGS: "Hello from OpenShift Cluster.;Second greeting from OCP."
+  GREETINGS: "Hello from OpenShift Cluster."
