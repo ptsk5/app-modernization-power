@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: quay.io/client-engineering-cee/ocp-workshop/frontend:v1
+          image: quay.io/jpetnik/multi-arch/frontend:latest
           ports:
             - containerPort: 8080
           resources:
