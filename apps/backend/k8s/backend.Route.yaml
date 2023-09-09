@@ -1,0 +1,12 @@
+# UNCOMMENT IF NEEDED
+# apiVersion: route.openshift.io/v1
+# kind: Route
+# metadata:
+#   name: backend
+# spec:
+#   tls:
+#     termination: edge
+#   to:
+#     name: backend
+#     kind: Service
+#     weight: 100
