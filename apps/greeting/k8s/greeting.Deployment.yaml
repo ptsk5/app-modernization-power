@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: greeting
-          image: quay.io/client-engineering-cee/ocp-workshop/greeting:v2
+          image: quay.io/jpetnik/multi-arch/greeting:latest
           ports:
             - containerPort: 5000
           env:
