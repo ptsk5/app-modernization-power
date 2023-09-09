@@ -1,0 +1,11 @@
+apiVersion: console.openshift.io/v1
+kind: ConsoleNotification
+metadata:
+  labels:
+    app.kubernetes.io/instance: web-console
+  name: banner
+spec:
+  backgroundColor: '#eb3440'
+  color: '#fff'
+  location: BannerTop
+  text: ppc64le OpenShift Cluster (on-premise)

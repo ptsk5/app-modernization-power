@@ -1,0 +1,11 @@
+apiVersion: console.openshift.io/v1
+kind: ConsoleNotification
+metadata:
+  labels:
+    app.kubernetes.io/instance: web-console
+  name: banner
+spec:
+  backgroundColor: '#0088ce'
+  color: '#fff'
+  location: BannerTop
+  text: x86 OpenShift Cluster (IBM Cloud)
