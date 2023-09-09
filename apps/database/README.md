@@ -79,9 +79,17 @@ psql -v ON_ERROR_STOP=1 --username demouser -d demodb  <<-EOSQL
 EOSQL
 ```
 
-In case you want to access the database remotely and not only from within the cluster, you can expose the service and get the route url.
+In case you want to access the database remotely and not only from within the cluster, you can expose the service and get the route url:
 
 ```bash
 oc expose svc postgresql
 oc get route
+```
+
+Or better, you can only port-forward and bind the port of the running pod to your local filesystem:
+
+```bash
+oc get po # get pod name, e.g. postgresql-1-wctsw
+oc port-forward postgresql-1-wctsw 5432:5432
+# connect to localhost:5432
 ```
