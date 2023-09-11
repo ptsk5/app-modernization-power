@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: backend
-          image: quay.io/jpetnik/multi-arch/backend:latest
+          image: quay.io/jpetnik/multi-arch/backend:v1
           ports:
             - containerPort: 4000
           env:
