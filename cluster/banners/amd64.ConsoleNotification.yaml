@@ -8,4 +8,4 @@ spec:
   backgroundColor: '#0088ce'
   color: '#fff'
   location: BannerTop
-  text: x86 OpenShift Cluster (IBM Cloud)
+  text: amd64 OpenShift Cluster (IBM Cloud)
